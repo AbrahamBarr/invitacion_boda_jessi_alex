@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Amsterdam";
+  src: url("/static/fonts/amsterdam.ttf") format("truetype");
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fff;
+  color: #333;
+}
+.seccion {
+  padding: 80px 20px;
+  text-align: center;
+}
+.portada {
+  background: linear-gradient(to bottom, #ffffff, #f8f4f0);
+  padding: 150px 20px;
+}
+.nombres-novios {
+  font-family: "Amsterdam", cursive;
+  font-size: 3rem;
+  color: #D2695E;
+}
+.imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.imagenes img {
+  width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.imagenes img:hover {
+  transform: scale(1.05);
+}
+.boton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #D2695E;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+#countdown {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+form input, form button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+form button {
+  background-color: #D2695E;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.icono {
+  font-size: 2.5rem;
+  width: 60px;
+  text-align: center;
+  color: #D2695E;
+}
+
+/* .itinerario {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.evento {
+  display: flex;
+  gap: 20px;
+  max-width: 800px;
+  align-items: center;
+  text-align: left;
+}
+.evento img {
+  width: 100px;
+  border-radius: 10px;
+}
+.evento h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #D2695E;
+}
+.evento p {
+  margin: 5px 0 0 0;
+} */

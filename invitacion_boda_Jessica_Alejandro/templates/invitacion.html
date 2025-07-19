@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Jessica & Alejandro</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+</audio>
+
+<section class="seccion portada" data-aos="fade-in">
+  <h1 class="nombres-novios">Jessica & Alejandro</h1>
+  <p>15 de noviembre de 2025</p>
+  <a href="/static/calendario.ics" class="boton" download>Agregar al calendario</a>
+</section>
+
+<section class="seccion" id="contador" data-aos="fade-up">
+  <h2>Faltan...</h2>
+  <div id="countdown"></div>
+</section>
+
+<section class="seccion" data-aos="fade-up">
+  <h2>Itinerario</h2>
+  <div class="itinerario">
+    <div class="evento">
+      <div class="icono"><i class="fas fa-church"></i></div>
+      <div>
+        <h3>18:00 — Misa</h3>
+        <p>Acompáñanos a unir nuestras almas en una ceremonia llena de amor y bendiciones.</p>
+      </div>
+    </div>
+    <div class="evento">
+      <div class="icono"><i class="fas fa-glass-cheers"></i></div>
+      <div>
+        <h3>19:00 — Brindis</h3>
+        <p>Levantemos las copas para celebrar el inicio de esta nueva etapa con alegría.</p>
+      </div>
+    </div>
+    <div class="evento">
+      <div class="icono"><i class="fas fa-utensils"></i></div>
+      <div>
+        <h3>20:00 — Cena</h3>
+        <p>Disfrutemos juntos de una cena deliciosa preparada con cariño.</p>
+      </div>
+    </div>
+    <div class="evento">
+      <div class="icono"><i class="fas fa-music"></i></div>
+      <div>
+        <h3>21:00 — Baile</h3>
+        <p>Que la música nos una y la pista se llene de amor, risas y pasos felices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion galeria" data-aos="fade-up">
+  <h2>Galería</h2>
+  <div class="imagenes">
+    <img src="/static/images/IMG_0882.jpg" />
+    <img src="/static/images/IMG_1051.jpg" />
+    <img src="/static/images/IMG_1068.jpg" />
+    <img src="/static/images/IMG_1098.jpg" />
+  </div>
+</section>
+
+<section class="seccion" data-aos="fade-up">
+  <h2>Qué hacer en Guadalajara</h2>
+  <ul>
+    <li>🌇 Centro histórico y Hospicio Cabañas</li>
+    <li>🌿 Tlaquepaque y Tonalá para arte y comida</li>
+    <li>☕ Café en Chapultepec o Americana</li>
+    <li>🌮 Tortas ahogadas y birria tradicional</li>
+    <li>🎶 Mariachi en la Plaza de los Mariachis</li>
+  </ul>
+</section>
+
+<section class="seccion" id="rsvp" data-aos="fade-up">
+  <h2>Confirmación</h2>
+  <form action="/confirmar" method="post">
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu correo" required>
+    <button type="submit">Confirmar asistencia</button>
+  </form>
+</section>
+
+<section class="seccion" id="cierre" data-aos="fade-up">
+  <h2>Gracias por acompañarnos en este momento tan especial</h2>
+</section>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="/static/js/countdown.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+@font-face {
+    font-family: 'Amsterdam';
+    src: url('/static/fonts/amsterdam.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #fefefe;
+    text-align: center;
+    padding: 50px;
+}
+
+.nombres-novios {
+    font-family: 'Amsterdam', cursive;
+    font-size: 3rem;
+    color: #2e2e2e;
+    margin-bottom: 20px;
+}
