@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-<!--   <title>Jessica & Alejandro</title> -->
+  <title>Jessica & Alejandro</title>
   <link rel="stylesheet" href="/static/css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -82,11 +82,23 @@
 <section class="seccion" id="rsvp" data-aos="fade-up">
   <h2>Confirmación</h2>
   <form action="/confirmar" method="post">
-    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <label for="nombre">Selecciona tu nombre:</label>
+    <select id="nombre" name="nombre" onchange="actualizarOpciones()" required>
+      {% for nombre in boletos_dict %}
+        <option value="{{ nombre }}">{{ nombre }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="boletos">Número de asistentes:</label>
+    <select id="boletos" name="boletos" required>
+      <!-- JS lo llenará automáticamente -->
+    </select>
+
     <input type="email" name="email" placeholder="Tu correo" required>
     <button type="submit">Confirmar asistencia</button>
   </form>
 </section>
+
 
 <!-- <section class="seccion" id="cierre" data-aos="fade-up">
   <h2>Gracias por acompañarnos en este momento tan especial</h2>
@@ -95,6 +107,28 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="/static/js/countdown.js"></script>
 <script>AOS.init();</script>
+
+<script>
+  const boletosDict = {{ boletos_dict | tojson }};
+  const selectNombre = document.getElementById("nombre");
+  const selectBoletos = document.getElementById("boletos");
+
+  function actualizarOpciones() {
+    const nombre = selectNombre.value;
+    const max = boletosDict[nombre] || 1;
+
+    selectBoletos.innerHTML = "";
+    for (let i = 1; i <= max; i++) {
+      const opt = document.createElement("option");
+      opt.value = i;
+      opt.textContent = i;
+      selectBoletos.appendChild(opt);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", actualizarOpciones);
+</script>
+
 
 </body>
 </html>
