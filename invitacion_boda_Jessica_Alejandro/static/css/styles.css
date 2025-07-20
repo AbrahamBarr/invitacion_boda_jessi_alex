@@ -7,20 +7,20 @@ body {
   font-family: sans-serif;
   scroll-behavior: smooth;
   background-color: #fff;
-  color: #333;
+  color: #D2695E;
 }
 .seccion {
   padding: 80px 20px;
   text-align: center;
 }
-.portada {
+/* .portada {
   background: linear-gradient(to bottom, #ffffff, #f8f4f0);
   padding: 150px 20px;
-}
+} */
 .nombres-novios {
   font-family: "Amsterdam", cursive;
   font-size: 3rem;
-  color: #D2695E;
+  color: #fff;
 }
 .imagenes {
   display: flex;
@@ -75,6 +75,13 @@ form button {
   text-align: center;
   color: #D2695E;
 }
+body {
+  background-image: url("/static/Invitación de la boda.svg");
+  background-repeat: no-repeat;
+  background-size: cover; /* o contain según el diseño */
+  background-position: center;
+}
+
 
 /* .itinerario {
   display: flex;
