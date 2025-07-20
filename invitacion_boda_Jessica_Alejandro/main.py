@@ -6,7 +6,7 @@ from fastapi.templating import Jinja2Templates
 import pandas as pd
 
 # Cargar el archivo Excel una sola vez al iniciar FastAPI
-excel_path = "data/invitados.xlsx" 
+excel_path = "C:\Users\a0s10rw\Desktop\Backend_boda\invitacion_boda_Jessica_Alejandro\data\invitados.xlsx" 
 df = pd.read_excel(excel_path)
 
 # Filtrar filas con "Invitación dirigida a"
